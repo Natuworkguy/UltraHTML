@@ -68,7 +68,7 @@ Then in JS:
 
 ## 🧪 Demo
 
-Check out the `/demo/` folder (coming soon).
+Check out the `/demo/` folder or [visit the live playground (coming soon)](#).
 
 ---
 
@@ -92,8 +92,8 @@ We're taking that same vibe — clean UI, intuitive interactions — and boiling
 
 ```
 UltraHTML/
-├── dist/        # Minified production CSS/JS
-├── src/         # Source code (ultra.css, ultra.js)
+├── dist/        # Ready-to-use CSS and JS files (not minified)
+├── src/         # Source CSS and JS files
 ├── demo/        # Demo page
 ├── docs/        # Documentation
 ├── tests/       # (Optional) JS tests
@@ -134,5 +134,3 @@ Made with ❤️ by **[Natuworkguy](https://github.com/Natuworkguy)**
 ## 🤝 Contributing
 
 Wanna add new components, fix bugs, or expand features? Go wild. PRs welcome!
-
-```
