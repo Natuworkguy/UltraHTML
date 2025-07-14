@@ -93,10 +93,8 @@ We're taking that same vibe — clean UI, intuitive interactions — and boiling
 ```
 UltraHTML/
 ├── dist/        # Ready-to-use CSS and JS files (not minified)
-├── src/         # Source CSS and JS files
 ├── demo/        # Demo page
 ├── docs/        # Documentation
-├── tests/       # (Optional) JS tests
 ├── LICENSE
 └── README.md
 ```
