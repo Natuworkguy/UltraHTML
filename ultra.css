@@ -1,0 +1,266 @@
+:root {
+    --underline-default-color: red;
+
+    --btn-default-color: #0bf00b;
+
+    --tab-default-color: #2196f3;
+    --tab-select-color: red;
+    --tab-active-color: rgba(255, 0, 0, 0.1);
+    --tab-disabled-color: lightgrey;
+
+    --chip-color: lightgrey;
+    --chip-text-color: grey;
+    --chip-hover-color: lightblue;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-50);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.fade-out {
+    transition: transform 0.5s ease-in-out;
+    animation: fade-out 1s ease-out forwards;
+    pointer-events: none;
+}
+
+.fade-out-end {
+    display: none !important;
+}
+
+.ultra-section-ul::after {
+    content: "";
+    display: block;
+    background-color: var(--underline-default-color);
+    height: 10px;
+    margin-top: 5px;
+    border-radius: 20px;
+}
+
+.ultra-section-ul.cover-only::after {
+    width: fit-content;
+    min-width: 30px;
+}
+
+.ultra-section-ul.cover-only.ctr-ul::after {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button.ultra-button {
+  background-color: var(--btn-default-color);
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+button.ultra-button:hover {
+  background-color: hsl(from var(--btn-default-color) h calc(s + 20) l);
+}
+
+button.ultra-button:active {
+  background-color: var(--btn-default-color);
+}
+
+button.ultra-button.button-wave {
+  background-color: var(--btn-default-color);
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+button.ultra-button.button-wave:hover {
+  background-color: hsl(from var(--btn-default-color) h calc(s + 20) l);
+}
+
+button.ultra-button.button-wave:active {
+  background-color: var(--btn-default-color);
+}
+
+button.ultra-button.button-wave .wave-effect {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ultra-ripple 0.6s linear;
+  background: rgba(255, 255, 255, 0.6);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes ultra-ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+button.ultra-btn.big-button {
+    width: 100%;
+}
+
+div.ultra-popup-container {
+  position: fixed;
+  display: block;
+  top: 20px;
+  right: 20px;
+  height: 100%;
+  width: 35%;
+  overflow-wrap: break-word;
+}
+
+div.ultra-popup {
+  background-color: gray;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 30px;
+  color: #fff;
+  height: fit-content;
+}
+
+div.ultra-popup.fade-out {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+@media (max-width: 600px) {
+  div.ultra-popup-container {
+    width: 90%;
+    right: 5%;
+    top: 10px;
+  }
+  div.ultra-popup {
+    margin: 10px 0;
+    border-radius: 8px;
+  }
+}
+
+input.ultra-input {
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 5px;
+    border-color: black;
+}
+
+input.ultra-input::placeholder {
+    text-align: center;
+}
+
+.ultra-tab-container {
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.ultra-tab {
+    position: relative;
+    padding: 10px 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: background-color 0.5s ease-in-out;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.ultra-tab.tab-disabled {
+    cursor: not-allowed;
+}
+
+.ultra-tab::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--tab-default-color);
+    border-radius: 99px;
+    transition: width 0.3s ease;
+}
+
+.ultra-tab.tab-disabled::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--tab-disabled-color);
+    border-radius: 99px;
+    transition: width 0.3s ease;
+}
+
+.ultra-tab:not(.tab-disabled):active {
+    background-color: var(--tab-active-color);
+}
+
+.ultra-tab.tab-active::after {
+    background-color: var(--tab-select-color);
+}
+
+section.ultra-section {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    margin: 10px;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+
+div.ultra-chip {
+    background-color: var(--chip-color);
+    color: var(--chip-text-color);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+    padding-left: 17px;
+    padding-right: 17px;
+    margin: 5px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: background-color 0.5s ease-in-out;
+}
+
+div.ultra-chip:not(div.chip.no-hover-animation):hover {
+    background-color: var(--chip-hover-color);
+}
+
+div.ultra-chip:not(div.chip.chip-permanent) {
+    cursor: pointer;
+}
+
+div.ultra-chip img {
+    border-radius: 100px;
+    width: 15px;
+    height: 15px;
+    margin: 0px;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.ultra-chip-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
