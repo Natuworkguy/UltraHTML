@@ -68,7 +68,7 @@ Then in JS:
 
 ## 🧪 Demo
 
-Check out the `/demo/` folder or [visit the live playground (coming soon)](#).
+Click [here](https://natuworkguy.github.io/UltraHTML/demo/) to view the demo.
 
 ---
 
