@@ -1,4 +1,8 @@
 # 🌐 UltraHTML
+![MIT License](https://img.shields.io/badge/license-MIT-green)
+![GitHub stars](https://img.shields.io/github/stars/Natuworkguy/UltraHTML)
+![GitHub issues](https://img.shields.io/github/issues/Natuworkguy/UltraHTML)
+![GitHub last commit](https://img.shields.io/github/last-commit/Natuworkguy/UltraHTML)
 
 **Ultra-light UI library for beautiful buttons, tabs, chips, and popups — inspired by Materialize CSS, built from scratch.**
 
