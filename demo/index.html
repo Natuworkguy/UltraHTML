@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UltraHTML Demo</title>
+  <link rel="stylesheet" href="../dist/ultra.css" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f2f5;
+      padding: 2rem;
+      color: #222;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: var(--btn-default-color);
+    }
+    .demo-section {
+      margin-bottom: 3rem;
+    }
+    .ultra-tab-container {
+      max-width: 400px;
+      margin: 0 auto 1rem auto;
+      border-bottom: 2px solid var(--tab-default-color);
+    }
+    .popup-trigger {
+      display: block;
+      margin: 1rem auto;
+      text-align: center;
+    }
+  </style>
+</head>
+<body onload="Ultra.init()">
+
+  <h1>UltraHTML Demo</h1>
+
+  <section class="demo-section">
+    <h2>Buttons</h2>
+    <button class="ultra-button button-wave">Wave Button</button>
+    <button class="ultra-button">Simple Button</button>
+    <button class="ultra-button big-button button-wave" style="margin-top: 1rem;">Full Width Big Button</button>
+  </section>
+
+  <section class="demo-section">
+    <h2>Tabs</h2>
+    <div class="ultra-tab-container">
+      <div class="ultra-tab tab-active">Active Tab</div>
+      <div class="ultra-tab">Inactive Tab</div>
+      <div class="ultra-tab tab-disabled">Disabled Tab</div>
+    </div>
+  </section>
+
+  <section class="demo-section">
+    <h2>Chips</h2>
+    <div class="ultra-chip">Clickable Chip</div>
+    <div class="ultra-chip chip-permanent">Permanent Chip</div>
+    <div class="ultra-chip" style="background-color: #f9c74f; color: #333;">Custom Color Chip</div>
+  </section>
+
+  <section class="demo-section">
+    <h2>Popup Messages</h2>
+    <button class="ultra-button button-wave popup-trigger" onclick="Ultra.popupmsg('Hello from UltraHTML!')">
+      Show Popup
+    </button>
+  </section>
+
+  <script src="../dist/ultra.js" defer></script>
+</body>
+</html>
