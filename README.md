@@ -26,7 +26,7 @@ Then include the files:
 
 ```html
 <link rel="stylesheet" href="dist/ultra.css">
-<script src="dist/ultra.js" defer></script>
+<script src="ultra.js" onload="Ultra.init()"></script>
 ```
 
 #### 🌐 Option B: CDN (Coming Soon)
@@ -47,14 +47,6 @@ Here’s a quick taste of what UltraHTML gives you:
 </section>
 
 <div class="ultra-chip">I'm a chip</div>
-```
-
-Then in JS:
-
-```html
-<script>
-  Ultra.init(); // Enables wave effects, chip removal, tab clicks, etc.
-</script>
 ```
 
 ---
