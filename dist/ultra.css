@@ -264,3 +264,10 @@ div.ultra-chip img {
   flex-wrap: wrap;
   gap: 10px;
 }
+
+.ctr-all {
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+}
