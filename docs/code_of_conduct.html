@@ -6,24 +6,46 @@
   <title>Code of Conduct Agreement – UltraHTML</title>
   <link rel="stylesheet" href="../dist/ultra.css" type="text/css"/>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
     .page-wrapper {
       max-width: 600px;
       margin: 50px auto;
       text-align: center;
       font-family: sans-serif;
+      padding: 0 20px;
     }
+
     .ultra-section {
       margin-top: 30px;
     }
+
     .hidden {
       display: none;
+    }
+
+    /* Center the thanks section */
+    #thank-you {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 60vh;
     }
   </style>
 </head>
 <body>
   <div class="page-wrapper">
     <h1 class="ultra-section-ul cover-only ctr-ul">Code of Conduct</h1>
-    <section class="ultra-section ctr-all">
+
+    <section class="ultra-section ctr-all" id="agreement-section">
       <p>Before using UltraHTML's CSS or JS libraries, please read and agree to the following:</p>
       <ul style="text-align: left; padding: 0 20px;" class="ctr-all">
         <li>Be respectful and inclusive in all public use cases.</li>
@@ -35,20 +57,23 @@
       <p>By clicking the button below, you confirm that you agree to these rules.</p>
       <button id="agree-btn" class="ultra-button button-wave ctr-all">I Agree & Continue</button>
     </section>
-    <section id="thank-you" class="ultra-section hidden ctr-all">
+
+    <section id="thank-you" class="ultra-section hidden">
       <h2>✅ Thanks!</h2>
       <p>You may now continue using UltraHTML. Stay ultra!</p>
     </section>
   </div>
+
   <script src="../dist/ultra.js" type="text/javascript" defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const agreeBtn = document.getElementById("agree-btn");
       const thankYou = document.getElementById("thank-you");
+      const agreementSection = document.getElementById("agreement-section");
       const agreementKey = "ultraHTML_agreed";
 
       if (localStorage.getItem(agreementKey)) {
-        document.querySelector("section").classList.add("hidden");
+        agreementSection.classList.add("hidden");
         thankYou.classList.remove("hidden");
       }
 
