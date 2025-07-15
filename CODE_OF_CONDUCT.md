@@ -28,7 +28,7 @@ Project maintainers are responsible for clarifying and enforcing our standards o
 
 ## Reporting Guidelines
 
-If you are subject to or witness unacceptable behavior, please report it by contacting [your email or GitHub contact info].
+If you are subject to or witness unacceptable behavior, please report it by contacting info@nathannetwork.com.
 
 All complaints will be reviewed and investigated promptly and fairly.
 
