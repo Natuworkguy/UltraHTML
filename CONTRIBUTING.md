@@ -68,8 +68,9 @@ We welcome all contributions — big, small, code, docs, ideas, memes... all of 
 ```
 ultrahtml/
 ├── demo/               # Live demo page
-├── ultra.css           # Core styles
-├── ultra.js            # JS enhancements (like ripple effects)
+├── dist/               # Core files
+├   ├── ultra.css       # Core styles
+├   ├── ultra.js        # JS enhancements (like ripple effects)
 ├── docs/               # Markdown docs (how-to, features)
 ├── LICENSE
 └── README.md
