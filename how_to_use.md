@@ -99,12 +99,12 @@ Create an HTML file like this:
 <head>
   <link rel="stylesheet" href="dist/ultra.css">
 </head>
-<body onload="Ultra.init()">
+<body>
 
   <button class="ultra-button button-wave">Wave!</button>
   <div class="ultra-chip">Chip!</div>
 
-  <script src="dist/ultra.js" defer></script>
+  <script src="dist/ultra.js" onload="Ultra.init()" defer></script>
 </body>
 </html>
 ```
