@@ -5,30 +5,16 @@ This guide will show you how to drop UltraHTML into your project and get fancy b
 
 ---
 
-## 📦 1. Include the Files
+## 📦 1. Include the Files and initialize UltraHTML
 
 No builds, no bundlers — just link the files directly.
 
 ```html
 <link rel="stylesheet" href="dist/ultra.css" />
-<script src="dist/ultra.js" defer></script>
+<script src="dist/ultra.js" onload="Ultra.init()" defer></script>
 ````
 
 Make sure `ultra.js` is loaded after the DOM (`defer` or load it at the bottom).
-
----
-
-## 🚀 2. Initialize UltraHTML
-
-Run this **once** after your page loads:
-
-```html
-<script>
-  Ultra.init();
-</script>
-```
-
-It sets up ripple effects, tab switching, and chip dismissal.
 
 ---
 
