@@ -271,3 +271,16 @@ div.ultra-chip img {
     align-content: center;
     align-self: center;
 }
+
+.ultra-modal-container {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+.ultra-modal-close {
+  background: var(--btn-default-color);
+}
