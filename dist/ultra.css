@@ -215,7 +215,7 @@ input.ultra-input::placeholder {
     background-color: var(--tab-select-color);
 }
 
-section.ultra-section {
+.ultra-section {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
     padding: 20px;
     margin: 10px;
@@ -274,8 +274,6 @@ div.ultra-chip img {
 
 .ultra-modal-container {
   animation: fadeIn 0.3s ease;
-  word-break: break-word;
-  overflow-wrap: break-word;
 }
 
 @keyframes fadeIn {
