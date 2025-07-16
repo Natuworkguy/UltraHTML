@@ -10,8 +10,8 @@ We welcome all contributions — big, small, code, docs, ideas, memes... all of 
 
 ## 🧠 Before You Start
 
-- **Check the [Discussions](https://github.com/YOUR_USERNAME/UltraHTML/discussions)** for existing ideas.
-- **Search [Issues](https://github.com/YOUR_USERNAME/UltraHTML/issues)** before creating new ones.
+- **Check the [Discussions](https://github.com/Natuworkguy/UltraHTML/discussions)** for existing ideas.
+- **Search [Issues](https://github.com/Natuworkguy/UltraHTML/issues)** before creating new ones.
 - Read our [**Code of Conduct**](./CODE_OF_CONDUCT.md).
 
 ---
