@@ -37,8 +37,10 @@ const Ultra = {
               target.remove();
           });
       });
-  },
-  popupmsg(text = null, allowHTML = false) {
+  }
+}
+
+Ultra.popupmsg = function (text = null, allowHTML = false) {
     if (text === null) {
         throw new Error('"text" argument must be supplied')
     }
