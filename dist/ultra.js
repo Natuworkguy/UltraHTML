@@ -69,3 +69,49 @@ const Ultra = {
     }, 10000);
   }
 };
+
+Ultra.modal = function ({ head = "Modal", text = "" }) {
+  const modalOverlay = document.createElement("div");
+  modalOverlay.className = "ultra-modal-container";
+  modalOverlay.style.position = "fixed";
+  modalOverlay.style.top = "0";
+  modalOverlay.style.left = "0";
+  modalOverlay.style.width = "100vw";
+  modalOverlay.style.height = "100vh";
+  modalOverlay.style.background = "rgba(0, 0, 0, 0.5)";
+  modalOverlay.style.display = "flex";
+  modalOverlay.style.justifyContent = "center";
+  modalOverlay.style.alignItems = "center";
+  modalOverlay.style.zIndex = "9999";
+
+  const modal = document.createElement("div");
+  modal.className = "ultra-modal";
+  modal.style.background = "white";
+  modal.style.padding = "30px";
+  modal.style.borderRadius = "10px";
+  modal.style.maxWidth = "90%";
+  modal.style.width = "400px";
+  modal.style.position = "relative";
+  modal.style.boxShadow = "0 10px 30px rgba(0,0,0,0.3)";
+  modal.style.textAlign = "center";
+
+  const modalHead = document.createElement("h2");
+  modalHead.className = "ultra-modal-head";
+  modalHead.textContent = head;
+
+  const modalText = document.createElement("p");
+  modalText.className = "ultra-modal-text";
+  modalText.textContent = text;
+
+  const closeBtn = document.createElement("button");
+  closeBtn.className = "ultra-modal-close ultra-button button-wave";
+  closeBtn.textContent = "Close";
+  closeBtn.style.marginTop = "20px";
+  closeBtn.onclick = () => modalOverlay.remove()
+
+  modal.appendChild(modalHead);
+  modal.appendChild(modalText);
+  modal.appendChild(closeBtn);
+  modalOverlay.appendChild(modal);
+  document.body.appendChild(modalOverlay);
+};
