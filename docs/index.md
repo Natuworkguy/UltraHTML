@@ -13,5 +13,4 @@ UltraHTML provides clean, easy-to-use components like buttons, tabs, chips, and 
 ## Quick Links
 
 - [Components Overview](components.md)
-- [Customization Guide](customization.md)
 - [Getting Started](../README.md)
