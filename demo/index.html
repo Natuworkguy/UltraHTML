@@ -25,11 +25,6 @@
       margin: 0 auto 1rem auto;
       border-bottom: 2px solid var(--tab-default-color);
     }
-    .popup-trigger {
-      display: block;
-      margin: 1rem auto;
-      text-align: center;
-    }
   </style>
 </head>
 <body>
@@ -60,8 +55,15 @@
 
   <section class="demo-section">
     <h2>Popup Messages</h2>
-    <button class="ultra-button button-wave popup-trigger" onclick="Ultra.popupmsg('Hello from UltraHTML!')">
+    <button class="ultra-button button-wave" onclick="Ultra.popupmsg('Hello from UltraHTML!')">
       Show Popup
+    </button>
+  </section>
+
+  <section class="demo-section">
+    <h2>Modals</h2>
+    <button class="ultra-button button-wave" onclick='Ultra.modal({ head: "This is a modal", text: "Modals are used to quickly display important information"})'>
+      Show Modal
     </button>
   </section>
   <script src="../dist/ultra.js" onload="Ultra.init()"></script>
