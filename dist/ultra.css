@@ -274,6 +274,8 @@ div.ultra-chip img {
 
 .ultra-modal-container {
   animation: fadeIn 0.3s ease;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 @keyframes fadeIn {
