@@ -88,7 +88,7 @@ ultrahtml/
 
 ## 💬 Questions?
 
-Start a [Discussion](https://github.com/YOUR_USERNAME/UltraHTML/discussions) or hit up Issues.
+Start a [Discussion](https://github.com/Natuworkguy/UltraHTML/discussions) or hit up Issues.
 Don’t be shy — even if your idea’s wild, we love wild.
 
 ---
