@@ -51,7 +51,7 @@ Initializes UltraHTML functionality:
 Displays a popup toast message.
 
 > [!IMPORTANT]
-> Ultra.popupmsg will throw an Error if text is not set.
+> Ultra.popupmsg will throw a TypeError if `text` is not set.
 
 - `text` — String content for the popup  
 - `allowHTML` — *(Optional)* If `true`, renders `text` as HTML  
