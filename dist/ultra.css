@@ -11,6 +11,8 @@
     --chip-color: lightgrey;
     --chip-text-color: grey;
     --chip-hover-color: lightblue;
+
+    --switch-color: #2196f3;
 }
 
 @keyframes fade-out {
@@ -337,4 +339,59 @@ div.ultra-chip img {
 @keyframes dropdownFadeIn {
   from { opacity: 0; transform: translateY(-5px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.ultra-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+}
+
+.ultra-switch-input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ultra-switch-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #555;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.ultra-switch-slider::before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+.ultra-switch-input:checked + .ultra-switch-slider {
+  background-color: var(--switch-color, #2196f3);
+}
+
+.ultra-switch-input:checked + .ultra-switch-slider::before {
+  transform: translateX(22px);
+}
+
+.ultra-switch.ultra-disabled .ultra-switch-input {
+  pointer-events: none;
+}
+
+.ultra-switch.ultra-disabled .ultra-switch-slider {
+  background-color: #333;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
