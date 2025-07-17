@@ -4,7 +4,7 @@
 ![GitHub issues](https://img.shields.io/github/issues/Natuworkguy/UltraHTML)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Natuworkguy/UltraHTML)
 
-**Ultra-light UI library for beautiful buttons, tabs, chips, and popups — inspired by Materialize CSS, built from scratch.**
+**Ultra-light UI library for beautiful buttons, tabs, chips, popups, dropdowns, switches, and more — inspired by Materialize CSS, built from scratch.**
 
 > ⚡ Designed for speed.  
 > 🎨 Styled with love.  
@@ -16,8 +16,6 @@
 
 ### 1. Add UltraHTML to Your Project
 
-#### ✅ Option A: Clone or Download
-
 ```bash
 git clone https://github.com/Natuworkguy/UltraHTML.git
 ````
@@ -26,13 +24,8 @@ Then include the files:
 
 ```html
 <link rel="stylesheet" href="dist/ultra.css">
-<script src="ultra.js" onload="Ultra.init()"></script>
+<script src="dist/ultra.js" onload="Ultra.init()"></script>
 ```
-
-#### 🌐 Option B: CDN (Coming Soon)
-
-UltraHTML will soon be available via jsDelivr/UNPKG!
-
 ---
 
 ### 2. Use the Components
@@ -40,10 +33,9 @@ UltraHTML will soon be available via jsDelivr/UNPKG!
 Here’s a quick taste of what UltraHTML gives you:
 
 ```html
-<button class="ultra-button button-wave">Click Me</button>
-
 <section class="ultra-section ultra-section-ul cover-only ctr-ul">
   Hello, UltraHTML World!
+  <button class="ultra-button button-wave">Click Me</button>
 </section>
 
 <div class="ultra-chip">I'm a chip</div>
@@ -92,6 +84,7 @@ UltraHTML/
 ├── demo/        # Demo page
 ├── docs/        # Documentation
 ├── LICENSE
+├── how_to_use.md
 └── README.md
 ```
 
