@@ -135,5 +135,16 @@ const Ultra = {
     modal.appendChild(closeBtn);
     modalOverlay.appendChild(modal);
     document.body.appendChild(modalOverlay);
+  },
+
+  switch: {
+    state(el) {
+      return el?.checked === true
+    },
+    toggle(el) {
+      if (el) {
+        el.checked = !el.checked;
+      }
+    }
   }
 };
