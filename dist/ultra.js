@@ -1,5 +1,21 @@
 const Ultra = {
   init() {
+    document.querySelectorAll('.ultra-dropdown').forEach(dropdown => {
+      const button = dropdown.querySelector('.ultra-dropdown-btn');
+      button.addEventListener('click', (e) => {
+        e.stopPropagation();
+        // Close other dropdowns first
+        document.querySelectorAll('.ultra-dropdown').forEach(d => {
+          if (d !== dropdown) d.classList.remove('active');
+        });
+        dropdown.classList.toggle('active');
+      });
+    });
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.ultra-dropdown').forEach(dropdown => {
+        dropdown.classList.remove('active');
+      });
+    });
     // Button ripple effect
     document.querySelectorAll('button.ultra-button.button-wave').forEach(button => {
       button.addEventListener('click', function (e) {
