@@ -33,6 +33,16 @@
 ### 📝 Inputs
 - `.ultra-input` — Styled input element  
 
+### Dropdowns
+- `.ultra-dropdown` — Dropdown container
+- `.ultra-dropdown-btn` — Dropdown trigger button
+- `.ultra-dropdown-content` — Dropdown content
+
+### Switches
+- `.ultra-switch` — Switch container
+- `.ultra-switch-input` — Functional switch element
+- `.ultra-switch-slider` — Switsh slider
+
 ---
 
 ## 🧠 JavaScript API
