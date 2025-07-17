@@ -48,4 +48,5 @@ This Code of Conduct is adapted from the [Contributor Covenant, version 2.1](htt
 
 ---
 
-By participating in this project, you agree to abide by this Code of Conduct.
+> [!IMPORTANT]
+> By participating in this project, you agree to abide by this Code of Conduct.
