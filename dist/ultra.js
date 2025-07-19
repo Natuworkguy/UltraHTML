@@ -87,7 +87,7 @@ const Ultra = {
     }, 10000);
   },
 
-  modal({ head = "Modal", text = "" }) {
+  modal({ head = "Modal", text = "", buttonText = "Close" } = {}) {
     const modalOverlay = document.createElement("div");
     modalOverlay.className = "ultra-modal-container";
     Object.assign(modalOverlay.style, {
@@ -126,7 +126,7 @@ const Ultra = {
 
     const closeBtn = document.createElement("button");
     closeBtn.className = "ultra-modal-close ultra-button button-wave";
-    closeBtn.textContent = "Close";
+    closeBtn.textContent = buttonText;
     closeBtn.style.marginTop = "20px";
     closeBtn.onclick = () => modalOverlay.remove();
 
