@@ -66,7 +66,7 @@ Displays a popup toast message.
 - `text` — String content for the popup  
 - `allowHTML` — *(Optional)* If `true`, renders `text` as HTML  
 
-### `Ultra.modalmodal({ head = "Modal", text = "" , buttonText = "Close" })`
+### `Ultra.modal({ head = "Modal", text = "" , buttonText = "Close" })`
 Displays a full-screen modal.
 
 - `head` — Modal header (Defaults to "Modal")
