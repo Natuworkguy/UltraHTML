@@ -97,7 +97,9 @@ All key styles are controlled with CSS variables. Example:
 ```css
 :root {
   --btn-default-color: #0bf00b;
+
   --tab-default-color: #2196f3;
+
   --chip-color: lightgrey;
 }
 ```
