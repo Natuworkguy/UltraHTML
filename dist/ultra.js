@@ -1,5 +1,24 @@
 const Ultra = {
-  init() {
+  init({ contextMenuColor = "#1f1f1f" } = {}) {
+    const menu = document.querySelector(".ultra-context-menu");
+    if (menu) {
+      menu.style.background = contextMenuColor;
+      document.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+  
+        menu.style.top = `${e.pageY}px`;
+        menu.style.left = `${e.pageX}px`;
+        menu.style.display = "block";
+      });
+  
+      document.addEventListener("click", () => {
+        menu.style.display = "none";
+      });
+  
+      window.addEventListener("resize", () => (menu.style.display = "none"));
+      window.addEventListener("scroll", () => (menu.style.display = "none"));
+    }
+
     document.querySelectorAll('.ultra-dropdown').forEach(dropdown => {
       const button = dropdown.querySelector('.ultra-dropdown-btn');
       button.addEventListener('click', (e) => {
