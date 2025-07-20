@@ -31,6 +31,12 @@
 
   <h1>UltraHTML Demo</h1>
 
+  <div class="ultra-context-menu">
+    <div class="item" onclick="alert('📝 Edit clicked')">📝 Edit</div>
+    <div class="item" onclick="alert('❌ Delete clicked')">❌ Delete</div>
+    <div class="item" onclick="alert('🔗 Copy Link clicked')">🔗 Copy Link</div>
+  </div>
+
   <section class="demo-section">
     <h2>Buttons</h2>
     <button class="ultra-button button-wave">Wave Button</button>
@@ -92,6 +98,18 @@
       <input type="checkbox" class="ultra-switch-input" />
       <span class="ultra-switch-slider"></span>
     </label>
+    <h2>Disabled Switch</h2>
+    <label class="ultra-switch" disabled>
+      <input type="checkbox" class="ultra-switch-input" disabled />
+      <span class="ultra-switch-slider"></span>
+    </label>
+  </section>
+
+  <section class="demo-section">
+    <h2>Right-click menu</h2>
+    <section class="ultra-section">
+      Right-click anywhere on this page to see the context menu.
+    </section>
   </section>
   <script src="../dist/ultra.js" onload="Ultra.init()"></script>
 </body>
