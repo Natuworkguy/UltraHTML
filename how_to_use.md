@@ -1,20 +1,43 @@
 # 🛠️ How to Use UltraHTML
 
-Welcome, dev! 🎉  
-This guide will show you how to drop UltraHTML into your project and get fancy buttons, tabs, chips, and popups — fast.
+Welcome, dev! 🎉
+This guide shows how to drop UltraHTML into your project and get fancy buttons, tabs, chips, dropdowns, modals, switches, and popups — fast.
 
 ---
 
-## 📦 1. Include the Files and initialize UltraHTML
+## 📦 1. Include the Files & Initialize UltraHTML
 
-No builds, no bundlers — just link the files directly.
+No builds. No bundlers. Just drop and go:
 
 ```html
 <link rel="stylesheet" href="dist/ultra.css" />
 <script src="dist/ultra.js" onload="Ultra.init()" defer></script>
-````
+```
 
-Make sure `ultra.js` is loaded after the DOM (`defer` or load it at the bottom).
+Make sure the JS loads after the DOM (`defer` or place it at the end of `<body>`).
+
+---
+
+## 🧪 2. Quick Test Page
+
+Save this to `test.html` and open it in your browser:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="dist/ultra.css" />
+  </head>
+  <body>
+    <button class="ultra-button button-wave">Wave!</button>
+    <div class="ultra-chip">Chip!</div>
+
+    <script src="dist/ultra.js" onload="Ultra.init()" defer></script>
+  </body>
+</html>
+```
+
+Boom 💥 — you're Ultra now.
 
 ---
 
@@ -24,6 +47,7 @@ Make sure `ultra.js` is loaded after the DOM (`defer` or load it at the bottom).
 
 ```html
 <button class="ultra-button button-wave">Click Me</button>
+<button class="ultra-button big-button">Big Button</button>
 ```
 
 * `.button-wave` = animated ripple
@@ -41,7 +65,7 @@ Make sure `ultra.js` is loaded after the DOM (`defer` or load it at the bottom).
 </div>
 ```
 
-* `.tab-active` = shows as selected
+* `.tab-active` = currently selected tab
 * `.tab-disabled` = unclickable
 
 ---
@@ -50,63 +74,126 @@ Make sure `ultra.js` is loaded after the DOM (`defer` or load it at the bottom).
 
 ```html
 <div class="ultra-chip">Dismiss Me</div>
-<div class="ultra-chip chip-permanent">You Can’t Dismiss Me</div>
+<div class="ultra-chip chip-permanent">Can't Dismiss</div>
 ```
 
-* Click to dismiss (unless `.chip-permanent`)
+* Click to dismiss (unless it has `.chip-permanent`)
 
 ---
 
-### 💬 Popup Messages
+### 💬 Popups
 
 ```html
 <button onclick="Ultra.popupmsg('Hello there!')">Toast Me</button>
 ```
 
-* Dismisses on click or after 10s
-* Use `Ultra.popupmsg(html, true)` for rich HTML content
+* Auto-dismisses after 10s
+* Use `Ultra.popupmsg(html, true)` for HTML content
+
+---
+
+### 🪟 Modals
+
+```html
+<button onclick="Ultra.modal({ head: 'Modal Title', text: 'Important info here' })">
+  Show Modal
+</button>
+```
+
+* Modal with a title + text
+* More advanced options coming soon™️
+
+---
+
+### 🧠 Context Menu
+
+```html
+<div class="ultra-context-menu">
+  <div class="item" onclick="alert('📝 Edit clicked')">📝 Edit</div>
+  <div class="item" onclick="alert('❌ Delete clicked')">❌ Delete</div>
+  <div class="item" onclick="alert('🔗 Copy Link clicked')">🔗 Copy Link</div>
+</div>
+```
+
+* Appears on right-click (automatically)
+* Add your custom items using `.item`
+
+---
+
+### 🪜 Sections
+
+```html
+<section class="ultra-section">This is a section</section>
+```
+
+* Auto-styled container
+* Great for grouping UI
+
+---
+
+### 🔽 Dropdowns
+
+```html
+<div class="ultra-dropdown">
+  <button class="ultra-dropdown-btn">Choose Option</button>
+  <div class="ultra-dropdown-content">
+    <a href="#">Option A</a>
+    <a href="#">Option B</a>
+  </div>
+</div>
+```
+
+* Styled dropdowns that just work™
+
+---
+
+### 🔘 Switches
+
+```html
+<label class="ultra-switch">
+  <input type="checkbox" class="ultra-switch-input" />
+  <span class="ultra-switch-slider"></span>
+</label>
+```
+
+* Disabled version:
+
+```html
+<label class="ultra-switch" disabled>
+  <input type="checkbox" class="ultra-switch-input" disabled />
+  <span class="ultra-switch-slider"></span>
+</label>
+```
 
 ---
 
 ## 🎨 4. Customizing Styles
 
-UltraHTML uses **CSS variables**. Change them globally:
+UltraHTML uses CSS variables for full theme control:
 
 ```css
 :root {
   --btn-default-color: #ff6600;
   --tab-select-color: #ff3333;
+  --chip-default-bg: #eee;
 }
 ```
 
-Or override them per-component with custom classes.
+Override globally with `:root` or per-element with custom classes.
 
 ---
 
-## 📱 5. Mobile Friendly
+## 📱 5. Mobile-Friendly
 
-UltraHTML adapts for smaller screens out of the box — especially popup and tab elements. No extra config needed.
+UltraHTML is responsive out of the box:
+✔️ Tabs, modals, popups, and dropdowns scale smoothly
+✔️ No extra config needed
 
 ---
 
-## 🧪 6. Quick Test Page
+## 🧠 Final Tips
 
-Create an HTML file like this:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" href="dist/ultra.css">
-</head>
-<body>
-
-  <button class="ultra-button button-wave">Wave!</button>
-  <div class="ultra-chip">Chip!</div>
-
-  <script src="dist/ultra.js" onload="Ultra.init()" defer></script>
-</body>
-</html>
-```
-
-Open in your browser and boom — you're Ultra.
+* Use `defer` or `onload="Ultra.init()"` to avoid race conditions
+* Mix and match components freely
+* Minimal dependencies = maximal performance
+* Style it your way with CSS vars
