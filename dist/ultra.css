@@ -171,6 +171,7 @@ input.ultra-input::placeholder {
     gap: 10px;
     padding: 0;
     margin: 0;
+    width: fit-content;
 }
 
 .ultra-tab {
@@ -458,3 +459,4 @@ div.ultra-chip img {
     transform: scale(1);
   }
 }
+
