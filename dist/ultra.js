@@ -106,7 +106,12 @@ const Ultra = {
     }, 10000);
   },
 
-  modal({ head = "Modal", text = "", buttonText = "Close" } = {}) {
+  modal({
+    head = "Modal",
+    text = "",
+    buttonText = "Close",
+    buttonAction = null 
+  } = {}) {
     const modalOverlay = document.createElement("div");
     modalOverlay.className = "ultra-modal-container";
     Object.assign(modalOverlay.style, {
@@ -147,7 +152,11 @@ const Ultra = {
     closeBtn.className = "ultra-modal-close ultra-button button-wave";
     closeBtn.textContent = buttonText;
     closeBtn.style.marginTop = "20px";
-    closeBtn.onclick = () => modalOverlay.remove();
+    if (buttonAction == null) {
+      closeBtn.onclick = () => modalOverlay.remove();
+    } else {
+      closeBtn.onclick = () => { buttonAction(modalOverlay) };
+    }
 
     modal.appendChild(modalHead);
     modal.appendChild(modalText);
